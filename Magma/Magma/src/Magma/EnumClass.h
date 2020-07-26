@@ -30,10 +30,10 @@ static const std::vector<std::string> genereateEnumNames(const char* element) {
 
 #define MAGMA_ENUM(EnumName, ...)																												\
 enum class EnumName { __VA_ARGS__ };																											\
-static const std::vector<std::string> enumItemNames = genereateEnumNames(#__VA_ARGS__);															\
+static const std::vector<std::string> EnumName##itemNames = genereateEnumNames(#__VA_ARGS__);													\
 																																				\
 static std::ostream& operator << (std::ostream& os, const EnumName& element) {																	\
-	os << enumItemNames.at(int(element));																										\
+	os << EnumName##itemNames.at(int(element));																								\
 	return os;																																	\
 }																																				\
 																																				\

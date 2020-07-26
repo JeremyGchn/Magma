@@ -1,7 +1,7 @@
 #pragma once
 #include "Magma/Core.h"
 #include "Magma/IDisplayabe/IDisplayable.h"
-#include <Magma\EventSystem\Event.h>
+#include "Magma/EventSystem/Event.h"
 
 namespace Magma::EventSystem {
 
