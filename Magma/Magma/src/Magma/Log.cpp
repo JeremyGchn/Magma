@@ -8,7 +8,7 @@ namespace Magma {
 	std::shared_ptr<spdlog::logger> Log::clientLogger;
 
 	void Log::Init() {
-		//set the patter of display a message as [time] name of the caller then log
+		//set the pattern of display a message as [time] name of the caller then log
 		spdlog::set_pattern("%^[%T] %n: %v%$");
 
 		//create the core logger
