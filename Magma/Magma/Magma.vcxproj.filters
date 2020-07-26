@@ -19,6 +19,10 @@
     <ClInclude Include="src\Magma\Log.h">
       <Filter>Magma</Filter>
     </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\EventDispatcher.h" />
+    <ClInclude Include="src\Magma\IDisplayabe\IDisplayable.h" />
+    <ClInclude Include="src\Magma\EventSystem\Event.h" />
+    <ClInclude Include="src\Magma\EnumClass.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Magma\Application.cpp">
@@ -27,5 +31,7 @@
     <ClCompile Include="src\Magma\Log.cpp">
       <Filter>Magma</Filter>
     </ClCompile>
+    <ClCompile Include="src\Magma\EventSystem\EventDispatcher.cpp" />
+    <ClCompile Include="src\Magma\EventSystem\Event.cpp" />
   </ItemGroup>
 </Project>

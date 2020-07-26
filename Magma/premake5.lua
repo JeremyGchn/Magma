@@ -23,13 +23,14 @@ workspace "Magma"
 		}
 
 		includedirs{
+			"%{prj.name}/src",
 			"%{prj.name}/vendor/spdlog/include"
 		}
 	
 		filter "system:windows"
 			cppdialect "C++17"
 			staticruntime "On"
-			systemversion "10.0.18362.0"
+			systemversion "latest"
 
 			defines{
 				"MG_PLATFORM_WINDOWS",
@@ -79,7 +80,7 @@ workspace "Magma"
 		filter "system:windows"
 			cppdialect "C++17"
 			staticruntime "On"
-			systemversion "10.0.18362.0"
+			systemversion "latest"
 
 			defines{
 				"MG_PLATFORM_WINDOWS",
