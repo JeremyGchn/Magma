@@ -17,6 +17,9 @@ workspace "Magma"
 		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+		pchheader "mgpch.h"
+		pchsource "Magma/src/mgpch.cpp"
+
 		files{
 			"%{prj.name}/src/**.h",
 			"%{prj.name}/src/**.cpp"

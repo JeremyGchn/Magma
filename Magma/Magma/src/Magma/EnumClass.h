@@ -1,8 +1,5 @@
 #pragma once
-#include <iostream>
-#include <string>
-#include <cstdarg>
-#include <vector>
+#include "mgpch.h"
 
 static const std::vector<std::string> genereateEnumNames(const char* element) {
 	std::vector<std::string> items = std::vector<std::string>();

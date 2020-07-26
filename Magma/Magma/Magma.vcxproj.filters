@@ -4,6 +4,12 @@
     <Filter Include="Magma">
       <UniqueIdentifier>{4854A70D-B468-CFBE-7DEA-721EE9BDCBEF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Magma\EventSystem">
+      <UniqueIdentifier>{FE45BA32-6A5C-B8C8-B3D3-43EA1F298950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Magma\IDisplayabe">
+      <UniqueIdentifier>{9E6010F2-0A77-0E88-53EE-99A9BF43DF0F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Magma.h" />
@@ -16,22 +22,36 @@
     <ClInclude Include="src\Magma\EntryPoint.h">
       <Filter>Magma</Filter>
     </ClInclude>
+    <ClInclude Include="src\Magma\EnumClass.h">
+      <Filter>Magma</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Event.h">
+      <Filter>Magma\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\EventDispatcher.h">
+      <Filter>Magma\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\IDisplayabe\IDisplayable.h">
+      <Filter>Magma\IDisplayabe</Filter>
+    </ClInclude>
     <ClInclude Include="src\Magma\Log.h">
       <Filter>Magma</Filter>
     </ClInclude>
-    <ClInclude Include="src\Magma\EventSystem\EventDispatcher.h" />
-    <ClInclude Include="src\Magma\IDisplayabe\IDisplayable.h" />
-    <ClInclude Include="src\Magma\EventSystem\Event.h" />
-    <ClInclude Include="src\Magma\EnumClass.h" />
+    <ClInclude Include="src\mgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Magma\Application.cpp">
       <Filter>Magma</Filter>
     </ClCompile>
+    <ClCompile Include="src\Magma\EventSystem\Event.cpp">
+      <Filter>Magma\EventSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Magma\EventSystem\EventDispatcher.cpp">
+      <Filter>Magma\EventSystem</Filter>
+    </ClCompile>
     <ClCompile Include="src\Magma\Log.cpp">
       <Filter>Magma</Filter>
     </ClCompile>
-    <ClCompile Include="src\Magma\EventSystem\EventDispatcher.cpp" />
-    <ClCompile Include="src\Magma\EventSystem\Event.cpp" />
+    <ClCompile Include="src\mgpch.cpp" />
   </ItemGroup>
 </Project>

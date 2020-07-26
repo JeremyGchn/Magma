@@ -1,3 +1,4 @@
+#include "mgpch.h"
 #include "EventDispatcher.h"
 
 namespace  Magma::EventSystem {

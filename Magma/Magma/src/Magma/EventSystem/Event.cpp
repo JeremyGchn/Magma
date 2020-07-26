@@ -1,5 +1,5 @@
+#include "mgpch.h"
 #include "Event.h"
-#include <sstream>
 
 namespace Magma::EventSystem {
 

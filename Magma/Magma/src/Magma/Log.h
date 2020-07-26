@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Magma/Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"

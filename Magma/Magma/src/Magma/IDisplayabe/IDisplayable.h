@@ -1,7 +1,6 @@
 #pragma once
+#include "mgpch.h"
 #include "Magma/Core.h"
-
-#include <string>
 
 namespace Magma {
 
