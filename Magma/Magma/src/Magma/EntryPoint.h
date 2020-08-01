@@ -7,9 +7,7 @@ extern Magma::Application* Magma::CreateApplication();
 int main(int argc, char** argv) {
 	
 	Magma::Log::Init();
-	MG_CORE_WARNING("Initialized log !");
-	int test = 4;
-	MG_INFO("Hello! int = {0}", test);
+	MG_CORE_INFO("Log system initialized !");
 
 	auto app = Magma::CreateApplication();;
 	app->Run();

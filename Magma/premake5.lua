@@ -9,6 +9,12 @@ workspace "Magma"
 
 	outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+	-- Include directories relative to root folder
+	IncludeDir = {}
+	IncludeDir["GLFW"] = "vendor/GLFW/include"
+
+	include "vendor/GLFW"
+
 	project "Magma"
 		location "Magma"
 		kind "SharedLib"
@@ -27,7 +33,13 @@ workspace "Magma"
 
 		includedirs{
 			"%{prj.name}/src",
-			"%{prj.name}/vendor/spdlog/include"
+			"%{prj.name}/vendor/spdlog/include",
+			"%{IncludeDir.GLFW}"
+		}
+
+		links{
+			"GLFW", 
+			"opengl32.lib"
 		}
 	
 		filter "system:windows"

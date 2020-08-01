@@ -38,6 +38,10 @@
       <Filter>Magma</Filter>
     </ClInclude>
     <ClInclude Include="src\mgpch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Magma</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\Window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Magma\Application.cpp">
@@ -53,5 +57,6 @@
       <Filter>Magma</Filter>
     </ClCompile>
     <ClCompile Include="src\mgpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

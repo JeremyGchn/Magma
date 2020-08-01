@@ -11,7 +11,7 @@ namespace  Magma::EventSystem {
 
 	void EventDispatcher::DispatchEvent(Event& event) {
 		if (!event.IsHandled()) {
-			event.Use();
+			
 		}
 	}
 

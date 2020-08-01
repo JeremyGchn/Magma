@@ -4,6 +4,7 @@
 namespace Magma {
 	
 	Application::Application() {
+		window = std::unique_ptr<Window>(Window::Create());
 	}
 
 
@@ -14,8 +15,8 @@ namespace Magma {
 
 	void Application::Run() {
 		
-		while (true) {
-
+		while (running) {
+			window->OnUpdate();
 		}
 	}
 }
