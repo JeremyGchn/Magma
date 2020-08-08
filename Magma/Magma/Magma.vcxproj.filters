@@ -25,9 +25,6 @@
     <ClInclude Include="src\Magma\EnumClass.h">
       <Filter>Magma</Filter>
     </ClInclude>
-    <ClInclude Include="src\Magma\EventSystem\Event.h">
-      <Filter>Magma\EventSystem</Filter>
-    </ClInclude>
     <ClInclude Include="src\Magma\EventSystem\EventDispatcher.h">
       <Filter>Magma\EventSystem</Filter>
     </ClInclude>
@@ -42,21 +39,25 @@
       <Filter>Magma</Filter>
     </ClInclude>
     <ClInclude Include="src\Magma\Window.h" />
+    <ClInclude Include="src\Magma\EventSystem\Events\Event.h">
+      <Filter>Magma\EventSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Events\WindowsEventType.h" />
+    <ClInclude Include="src\Magma\EventSystem\Events\EventTypes.h" />
+    <ClInclude Include="src\Magma\EventSystem\Events\KeyEventTypes.h" />
+    <ClInclude Include="src\Magma\EventSystem\Events\MouseEventType.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Magma\Application.cpp">
       <Filter>Magma</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Magma\EventSystem\Event.cpp">
-      <Filter>Magma\EventSystem</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Magma\EventSystem\EventDispatcher.cpp">
-      <Filter>Magma\EventSystem</Filter>
     </ClCompile>
     <ClCompile Include="src\Magma\Log.cpp">
       <Filter>Magma</Filter>
     </ClCompile>
     <ClCompile Include="src\mgpch.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Magma\EventSystem\Events\Event.cpp">
+      <Filter>Magma\EventSystem</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -10,4 +10,9 @@ namespace Magma {
 		virtual const std::string ToString() const = 0;
 	};
 
+	static std::ostream& operator << (std::ostream& os, const IDisplayable& displayable) {
+		os << displayable.ToString();
+		return os;
+	}
+
 }

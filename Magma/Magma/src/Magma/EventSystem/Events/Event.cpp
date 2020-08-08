@@ -3,7 +3,7 @@
 
 namespace Magma::EventSystem {
 
-	Event::Event(const EventType type) : eventType(type), handled(false) {
+	Event::Event() : handled(false) {
 
 	}
 
@@ -13,7 +13,7 @@ namespace Magma::EventSystem {
 
 	const std::string Event::ToString() const {
 		std::stringstream ss;
-		ss << eventType;
+		ss << GetEventType();
 		return ss.str();
 	}
 

@@ -2,7 +2,7 @@
 #include "mgpch.h"
 
 #include "Magma/Core.h"
-#include "Magma/EventSystem/Event.h"
+#include "Magma/EventSystem/Events/Event.h"
 
 namespace Magma {
 	

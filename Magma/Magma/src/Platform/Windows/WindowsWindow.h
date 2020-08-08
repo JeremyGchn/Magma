@@ -21,11 +21,7 @@ namespace Magma {
 		virtual void SetVSync(bool enabled) override;
 		virtual bool IsVSyncEnabled() const override { return data.VSyncEnabled; }
 
-	private:
-		virtual void Init(const WindowProps& props);
-		virtual void Shutdown();
-
-	private:
+	public: 
 		struct WindowData {
 			std::string title;
 			unsigned int width;
@@ -34,6 +30,10 @@ namespace Magma {
 
 			EventCallback eventCallback;
 		};
+
+	private:
+		virtual void Init(const WindowProps& props);
+		virtual void Shutdown();		
 
 	private:
 		GLFWwindow* window;
