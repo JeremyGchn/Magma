@@ -14,7 +14,7 @@ namespace Magma::EventSystem {
 		~KeyPressedEvent() { }
 
 		EVENT_TYPE(KeyPressed)
-		EVENT_TO_STRING("KeyCode : " << keyCode << "RepeatCounter : " << repeat);
+		EVENT_TO_STRING("KeyCode : " << keyCode << " RepeatCounter : " << repeat);
 	private:
 		int keyCode;
 		int repeat;

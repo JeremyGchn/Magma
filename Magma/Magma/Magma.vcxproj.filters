@@ -7,8 +7,17 @@
     <Filter Include="Magma\EventSystem">
       <UniqueIdentifier>{FE45BA32-6A5C-B8C8-B3D3-43EA1F298950}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Magma\EventSystem\Events">
+      <UniqueIdentifier>{2288A190-0EAD-F010-37F8-D5A0237CEF2E}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Magma\IDisplayabe">
       <UniqueIdentifier>{9E6010F2-0A77-0E88-53EE-99A9BF43DF0F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,36 +37,60 @@
     <ClInclude Include="src\Magma\EventSystem\EventDispatcher.h">
       <Filter>Magma\EventSystem</Filter>
     </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Events\Event.h">
+      <Filter>Magma\EventSystem\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Events\EventTypes.h">
+      <Filter>Magma\EventSystem\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Events\KeyEventTypes.h">
+      <Filter>Magma\EventSystem\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Events\MouseEventType.h">
+      <Filter>Magma\EventSystem\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Events\WindowsEventType.h">
+      <Filter>Magma\EventSystem\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Magma\IDisplayabe\IDisplayable.h">
       <Filter>Magma\IDisplayabe</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\Layer.h">
+      <Filter>Magma</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Magma\LayerStack.h">
+      <Filter>Magma</Filter>
     </ClInclude>
     <ClInclude Include="src\Magma\Log.h">
       <Filter>Magma</Filter>
     </ClInclude>
-    <ClInclude Include="src\mgpch.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+    <ClInclude Include="src\Magma\Window.h">
       <Filter>Magma</Filter>
     </ClInclude>
-    <ClInclude Include="src\Magma\Window.h" />
-    <ClInclude Include="src\Magma\EventSystem\Events\Event.h">
-      <Filter>Magma\EventSystem</Filter>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="src\Magma\EventSystem\Events\WindowsEventType.h" />
-    <ClInclude Include="src\Magma\EventSystem\Events\EventTypes.h" />
-    <ClInclude Include="src\Magma\EventSystem\Events\KeyEventTypes.h" />
-    <ClInclude Include="src\Magma\EventSystem\Events\MouseEventType.h" />
+    <ClInclude Include="src\mgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Magma\Application.cpp">
       <Filter>Magma</Filter>
     </ClCompile>
+    <ClCompile Include="src\Magma\EventSystem\Events\Event.cpp">
+      <Filter>Magma\EventSystem\Events</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Magma\Layer.cpp">
+      <Filter>Magma</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Magma\LayerStack.cpp">
+      <Filter>Magma</Filter>
+    </ClCompile>
     <ClCompile Include="src\Magma\Log.cpp">
       <Filter>Magma</Filter>
     </ClCompile>
-    <ClCompile Include="src\mgpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\Magma\EventSystem\Events\Event.cpp">
-      <Filter>Magma\EventSystem</Filter>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\mgpch.cpp" />
   </ItemGroup>
 </Project>

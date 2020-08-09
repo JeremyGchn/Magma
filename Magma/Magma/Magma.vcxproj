@@ -79,11 +79,11 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MG_PLATFORM_WINDOWS;MG_BUILD_DLL;MG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;..\vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MG_PLATFORM_WINDOWS;MG_BUILD_DLL;GLFW_INCLUDE_NONE;MG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;..\vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -101,14 +101,14 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MG_PLATFORM_WINDOWS;MG_BUILD_DLL;MG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;..\vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MG_PLATFORM_WINDOWS;MG_BUILD_DLL;GLFW_INCLUDE_NONE;MG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;..\vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -127,14 +127,14 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>mgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>MG_PLATFORM_WINDOWS;MG_BUILD_DLL;MG_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;..\vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>MG_PLATFORM_WINDOWS;MG_BUILD_DLL;GLFW_INCLUDE_NONE;MG_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;..\vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -154,42 +154,37 @@
     <ClInclude Include="src\Magma\Core.h" />
     <ClInclude Include="src\Magma\EntryPoint.h" />
     <ClInclude Include="src\Magma\EnumClass.h" />
-    <ClInclude Include="src\Magma\EventSystem\Events\Event.h" />
     <ClInclude Include="src\Magma\EventSystem\EventDispatcher.h" />
+    <ClInclude Include="src\Magma\EventSystem\Events\Event.h" />
     <ClInclude Include="src\Magma\EventSystem\Events\EventTypes.h" />
-    <ClInclude Include="src\Magma\EventSystem\Events\KeyEventTypes.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="src\Magma\EventSystem\Events\MouseEventType.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
-    <ClInclude Include="src\Magma\EventSystem\Events\WindowsEventType.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
+    <ClInclude Include="src\Magma\EventSystem\Events\KeyEventTypes.h" />
+    <ClInclude Include="src\Magma\EventSystem\Events\MouseEventType.h" />
+    <ClInclude Include="src\Magma\EventSystem\Events\WindowsEventType.h" />
     <ClInclude Include="src\Magma\IDisplayabe\IDisplayable.h" />
+    <ClInclude Include="src\Magma\Layer.h" />
+    <ClInclude Include="src\Magma\LayerStack.h" />
     <ClInclude Include="src\Magma\Log.h" />
-    <ClInclude Include="src\mgpch.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
     <ClInclude Include="src\Magma\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\mgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Magma\Application.cpp" />
     <ClCompile Include="src\Magma\EventSystem\Events\Event.cpp" />
+    <ClCompile Include="src\Magma\Layer.cpp" />
+    <ClCompile Include="src\Magma\LayerStack.cpp" />
     <ClCompile Include="src\Magma\Log.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\vendor\GLFW\GLFW.vcxproj">
       <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\Glad\Glad.vcxproj">
+      <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

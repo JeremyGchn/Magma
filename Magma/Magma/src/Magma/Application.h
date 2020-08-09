@@ -4,6 +4,7 @@
 #include <Magma\Window.h>
 
 #include "Magma/EventSystem/Events/EventTypes.h"
+#include "Magma/LayerStack.h"
 
 namespace Magma {
 
@@ -16,11 +17,14 @@ namespace Magma {
 		void Run();
 		void OnEvent(EventSystem::Event& e);
 
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* overlay);
 	private:
 		bool OnWindowClosed(EventSystem::WindowClosedEvent& e);
 
 	private:
 		std::unique_ptr<Window> window;
+		LayerStack layerStack;
 		bool running = true;
 	};
 

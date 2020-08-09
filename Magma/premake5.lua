@@ -12,8 +12,10 @@ workspace "Magma"
 	-- Include directories relative to root folder
 	IncludeDir = {}
 	IncludeDir["GLFW"] = "vendor/GLFW/include"
+	IncludeDir["Glad"] = "Magma/vendor/Glad/include"
 
 	include "vendor/GLFW"
+	include "Magma/vendor/Glad"
 
 	project "Magma"
 		location "Magma"
@@ -34,22 +36,25 @@ workspace "Magma"
 		includedirs{
 			"%{prj.name}/src",
 			"%{prj.name}/vendor/spdlog/include",
-			"%{IncludeDir.GLFW}"
+			"%{IncludeDir.GLFW}",
+			"%{IncludeDir.Glad}"
 		}
 
 		links{
 			"GLFW", 
+			"Glad", 
 			"opengl32.lib"
 		}
 	
 		filter "system:windows"
 			cppdialect "C++17"
-			staticruntime "On"
+			staticruntime "Off"
 			systemversion "latest"
 
 			defines{
 				"MG_PLATFORM_WINDOWS",
-				"MG_BUILD_DLL"
+				"MG_BUILD_DLL",
+				"GLFW_INCLUDE_NONE"
 			}
 
 			postbuildcommands{

@@ -3,12 +3,16 @@
 
 #include "Magma/EventSystem/Events/EventTypes.h"
 
+#include <glad/glad.h>
+
 namespace Magma {
 	static bool GLFWInitialized = false;
+
 
 	static Magma::WindowsWindow::WindowData& GetData(GLFWwindow* window) {
 		return *static_cast<Magma::WindowsWindow::WindowData*>(glfwGetWindowUserPointer(window));
 	}
+
 
 	static void GLFWErrorCallback(int error, const char* description) {
 		MG_CORE_ERROR("GLFW Error ({0}) : {1}", error, description);
@@ -26,7 +30,7 @@ namespace Magma {
 
 
 	WindowsWindow::~WindowsWindow() {
-		
+		Shutdown();
 	}
 
 
@@ -46,6 +50,10 @@ namespace Magma {
 
 		window = glfwCreateWindow(int(data.width), int(data.height), data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(window);
+		
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		MG_CORE_ASSERT(status, "Failed to initialize Glad !");
+
 		glfwSetWindowUserPointer(window, &data);
 		SetVSync(true);
 
@@ -120,7 +128,7 @@ namespace Magma {
 	void WindowsWindow::Shutdown() {
 		glfwDestroyWindow(window);
 
-		MG_CORE_INFO("The window get just shutdown : {0}", data.title);
+		MG_CORE_INFO("The window just get shutdown : {0}", data.title);
 	}
 
 
