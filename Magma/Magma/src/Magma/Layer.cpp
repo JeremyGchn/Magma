@@ -4,7 +4,7 @@
 namespace Magma {
 	
 	Layer::Layer() {
-	
+		this->enabled = true;
 	}
 
 

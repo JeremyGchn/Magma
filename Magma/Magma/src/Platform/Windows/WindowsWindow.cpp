@@ -95,12 +95,12 @@ namespace Magma {
 			WindowData& data = GetData(window);
 			switch (action) {
 				case GLFW_PRESS: {
-						EventSystem::MouseButtonPressedEvent event(button);
-						data.eventCallback(event);
+					EventSystem::MouseButtonPressedEvent event(button);
+					data.eventCallback(event);
 				}
 				case GLFW_RELEASE: {
-						EventSystem::MouseButtonReleasedEvent event(button);
-						data.eventCallback(event);
+					EventSystem::MouseButtonReleasedEvent event(button);
+					data.eventCallback(event);
 				}
 			}
 		});
@@ -138,13 +138,7 @@ namespace Magma {
 
 
 	void WindowsWindow::SetVSync(bool enabled) {
-		if (enabled) {
-			glfwSwapInterval(1);
-		}
-		else {
-			glfwSwapInterval(0);
-		}
-
+		glfwSwapInterval(enabled ? 1 : 0);
 		data.VSyncEnabled = enabled;
 	}
 }
